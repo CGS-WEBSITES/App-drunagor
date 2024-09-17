@@ -1210,87 +1210,71 @@ input:-webkit-autofill
 }
 
 
-/* Estilos normais continuam aqui... */
+/* Estilos gerais para o container */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Tamanho máximo para telas normais */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
 
+/* Ajuste para telas widescreen */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1100px; /* Diminui o tamanho do container em widescreen */
+    }
+}
+
+/* Ajuste para telas ultrawide */
+@media screen and (min-width: 1920px) {
+    .container {
+        max-width: 1000px; /* Diminui o tamanho do container em ultrawide */
+    }
+}
+
+/* Ajuste de espaçamento e fontes para telas maiores */
+@media screen and (min-width: 1440px) {
+    .content {
+        padding: 40px;
+    }
+
+    .title {
+        font-size: 2rem; /* Aumenta o tamanho do título */
+    }
+
+    .description {
+        font-size: 1.1rem; /* Ajusta o tamanho da descrição */
+    }
+
+    .btn {
+        padding: 15px 30px;
+        font-size: 1rem; /* Ajusta o tamanho dos botões */
+    }
+}
+
+/* Para telas ainda maiores (ultrawide) */
 @media screen and (min-width: 1920px) {
     .content {
-        width: 1400px; /* Aumenta ainda mais a área de conteúdo */
-        height: 80%;
-    }
-
-    .content::before {
-        width: 55%; /* Aumenta a proporção do lado esquerdo */
+        padding: 50px;
     }
 
     .title {
-        font-size: 42px; /* Tamanho maior de fonte para títulos em telas ultra largas */
+        font-size: 2.2rem;
     }
 
     .description {
-        font-size: 20px; /* Aumenta o tamanho do texto */
+        font-size: 1.2rem;
     }
 
     .btn {
-        font-size: 14px; /* Aumenta o tamanho dos botões */
-        padding: 20px 80px; /* Expande o padding dos botões */
-    }
-
-    .form {
-        width: 65%; /* Maior área de formulário */
-    }
-
-    /* Ícones de redes sociais ainda maiores */
-    .item-social-media {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        font-size: 24px;
+        padding: 18px 35px;
+        font-size: 1.1rem;
     }
 }
-
-/* Media queries para telas ultra-widescreen (2560px e maiores) */
-@media screen and (min-width: 2560px) {
-    .content {
-        width: 1800px; /* Aumenta ainda mais para telas ultra widescreen */
-        height: 85%;
-    }
-
-    .content::before {
-        width: 60%; /* Aumenta a proporção do lado esquerdo */
-    }
-
-    .title {
-        font-size: 48px; /* Aumenta o tamanho da fonte para títulos */
-    }
-
-    .description {
-        font-size: 24px; /* Texto maior para maior legibilidade */
-    }
-
-    .btn {
-        font-size: 16px; /* Botões maiores */
-        padding: 25px 100px; /* Expande o padding para melhor proporção */
-    }
-
-    .form {
-        width: 70%; /* Maior área de formulário para distribuir conteúdo */
-    }
-
-    /* Ícones de redes sociais maiores para ultra-widescreen */
-    .item-social-media {
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        font-size: 30px;
-    }
-}
-
-
-
-
-
-
-/* Ícones de redes sociais maiores para ultra-widescreen */
 
 
 
