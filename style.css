@@ -18,9 +18,6 @@ body {
     background-size: cover; /* Garante que a imagem cubra toda a tela */
     background-position: center center; /* Centraliza a imagem de fundo */
     background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
-    
-    
-    
 }
 .content {
     background-color: #fff;
@@ -39,8 +36,6 @@ body {
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-
-
     left: 0;
 }
 .title {
@@ -192,8 +187,6 @@ input:-webkit-autofill
     text-transform: capitalize;
 }
 
-
-
 .sign-in-js .first-content .first-column {
     z-index: -1;
 }
@@ -211,14 +204,12 @@ input:-webkit-autofill
     border-bottom-left-radius: 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: slidein 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
-
+    animation: slidein 1.3s;
     z-index: 12;
 }
 
 .sign-up-js .content::before {
-    animation: slideout 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
-
+    animation: slideout 1.3s;
     z-index: 12;
 }
 
@@ -235,172 +226,21 @@ input:-webkit-autofill
     z-index: 13;    
 }
 
-
-/* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
 .sign-in-js .first-content .second-column {
-
     z-index: -1;
     position: relative;
-    animation: deslocamentoEsq 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: deslocamentoEsq 1.3s;
 }
 
 .sign-up-js .second-content .second-column {
     position: relative;
     z-index: -1;
-    animation: deslocamentoDir 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
-}
-/*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
-.cod-login img {
-    
-    max-width:50%;
-   margin-left: 25%;
-   display: flex;
-   margin-bottom: -10%;
- 
-
-   
+    animation: deslocamentoDir 1.3s;
 }
 
-.cod-login  {
+/* Responsividade */
 
-  background-color: #000000;
- 
-
-   
-}
-
-.cod-login p  {
-
-    text-align: center;
-    font-size: 25px;
-    padding: 10px;
-    color: #fff;
-
-   
-  
-     
-  }
-  
-
-
-
-
-
-
-/*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
-
-@keyframes deslocamentoEsq {
-
-    from {
-        left: 0;
-        opacity: 1;
-        z-index: 12;
-    }
-
-    25% {
-        left: -80px;
-        opacity: .5;
-        /* z-index: 12; NÃO HÁ NECESSIDADE */
-    }
-
-    50% {
-        left: -100px;
-        opacity: .2;
-        /* z-index: 12; NÃO HÁ NECESSIDADE */
-    }
-
-    to {
-        left: -110px;
-        opacity: 0;
-        z-index: -1;
-    }
-}
-
-
-@keyframes deslocamentoDir {
-
-    from {
-        left: 0;
-        z-index: 12;
-    }
-
-    25% {
-        left: 80px;
-        /* z-index: 12;  NÃO HÁ NECESSIDADE*/
-    }
-
-    50% {
-        left: 100px;
-        /* z-index: 12; NÃO HÁ NECESSIDADE*/
-        /* background-color: yellow;  Exemplo que dei no vídeo*/
-    }
-
-    to {
-        left: 110px;
-        z-index: -1;
-    }
-}
-
-
-/*ANIMAÇÃO CSS*/
-
-@keyframes slidein {
-
-    from {
-        left: 0;
-        width: 40%;
-    }
-
-    25% {
-        left: 5%;
-        width: 50%;
-    }
-
-    50% {
-        left: 25%;
-        width: 60%;
-    }
-
-    75% {
-        left: 45%;
-        width: 50%;
-    }
-
-    to {
-        left: 60%;
-        width: 40%;
-    }
-}
-
-@keyframes slideout {
-
-    from {
-        left: 60%;
-        width: 40%;
-    }
-
-    25% {
-        left: 45%;
-        width: 50%;
-    }
-
-    50% {
-        left: 25%;
-        width: 60%;
-    }
-
-    75% {
-        left: 5%;
-        width: 50%;
-    }
-
-    to {
-        left: 0;
-        width: 40%;
-    }
-}
-
-/*VERSÃO MOBILE*/
+/* Telas de até 1040px */
 @media screen and (max-width: 1040px) {
     .content {
         width: 100%;
@@ -426,125 +266,11 @@ input:-webkit-autofill
         top: 60%;
         left: 0;
         border-radius: 0;
-
     }
 
     .form {
         width: 90%;
     }
-    
-    /* ANIMAÇÃO MOBILE CSS*/
-
-    @keyframes deslocamentoEsq {
-
-        from {
-            top: 0;
-            opacity: 1;
-            z-index: 12;
-        }
-    
-        25% {
-            top: -80px;
-            opacity: .5;
-            /* z-index: 12; NÃO HÁ NECESSIDADE */
-        }
-    
-        50% {
-            top: -100px;
-            opacity: .2;
-            /* z-index: 12; NÃO HÁ NECESSIDADE */
-        }
-    
-        to {
-            top: -110px;
-            opacity: 0;
-            z-index: -1;
-        }
-    }
-    
-    
-    @keyframes deslocamentoDir {
-    
-        from {
-            top: 0;
-            z-index: 12;
-        }
-    
-        25% {
-            top: 80px;
-            /* z-index: 12;  NÃO HÁ NECESSIDADE*/
-        }
-    
-        50% {
-            top: 100px;
-            /* z-index: 12; NÃO HÁ NECESSIDADE*/
-            /* */
-        }
-    
-        to {
-            top: 110px;
-            z-index: -1;
-        }
-    }
-    
-    
-    
-    @keyframes slidein {
-    
-        from {
-            top: 0;
-            height: 40%;
-        }
-    
-        25% {
-            top: 5%;
-            height: 50%;
-        }
-    
-        50% {
-            top: 25%;
-            height: 60%;
-        }
-    
-        75% {
-            top: 45%;
-            height: 50%;
-        }
-    
-        to {
-            top: 60%;
-            height: 40%;
-        }
-    }
-    
-    @keyframes slideout {
-    
-        from {
-            top: 60%;
-            height: 40%;
-        }
-    
-        25% {
-            top: 45%;
-            height: 50%;
-        }
-    
-        50% {
-            top: 25%;
-            height: 60%;
-        }
-    
-        75% {
-            top: 5%;
-            height: 50%;
-        }
-    
-        to {
-            top: 0;
-            height: 40%;
-        }
-    }
-   
 }
 
 @media screen and (max-width: 740px) {
@@ -559,687 +285,34 @@ input:-webkit-autofill
     }
 }
 
-
-/* Estilos normais continuam aqui... */
-
+/* Telas acima de 1920px */
 @media screen and (min-width: 1920px) {
     .content {
-        width: 1400px; /* Aumenta ainda mais a área de conteúdo */
-        height: 80%;
-    }
-
-    .content::before {
-        width: 55%; /* Aumenta a proporção do lado esquerdo */
-    }
-
-    .title {
-        font-size: 42px; /* Tamanho maior de fonte para títulos em telas ultra largas */
-    }
-
-    .description {
-        font-size: 20px; /* Aumenta o tamanho do texto */
-    }
-
-    .btn {
-        font-size: 14px; /* Aumenta o tamanho dos botões */
-        padding: 20px 80px; /* Expande o padding dos botões */
-    }
-
-    .form {
-        width: 65%; /* Maior área de formulário */
-    }
-
-    /* Ícones de redes sociais ainda maiores */
-    .item-social-media {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        font-size: 24px;
-    }
-}
-
-/* Media queries para telas ultra-widescreen (2560px e maiores) */
-@media screen and (min-width: 2560px) {
-    .content {
-        width: 1800px; /* Aumenta ainda mais para telas ultra widescreen */
-        height: 85%;
-    }
-
-    .content::before {
-        width: 60%; /* Aumenta a proporção do lado esquerdo */
-    }
-
-    .title {
-        font-size: 48px; /* Aumenta o tamanho da fonte para títulos */
-    }
-
-    .description {
-        font-size: 24px; /* Texto maior para maior legibilidade */
-    }
-
-    .btn {
-        font-size: 16px; /* Botões maiores */
-        padding: 25px 100px; /* Expande o padding para melhor proporção */
-    }
-
-    .form {
-        width: 70%; /* Maior área de formulário para distribuir conteúdo */
-    }
-
-    /* Ícones de redes sociais maiores para ultra-widescreen */
-    .item-social-media {
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        font-size: 30px;
-    }
-}
-
-
-
-
-
-
-/* Ícones de redes sociais maiores para ultra-widescreen */
-
-
-
-
-
-
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Crimson Text', sans-serif;
-}
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('image/bg-login.png');
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    background-size: cover; /* Garante que a imagem cubra toda a tela */
-    background-position: center center; /* Centraliza a imagem de fundo */
-    background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
-    
-    
-    
-}
-.content {
-    background-color: #fff;
-    border-radius: 15px;
-    width: 960px;
-    height: 50%;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-.content::before {
-    content: "";
-    position: absolute;
-    background-color: #000;
-    width: 40%;
-    height: 100%;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-
-
-    left: 0;
-}
-.title {
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-.title-primary {
-    color: #fff;
-}
-.title-second {
-    color: #000;
-}
-.description {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 30px;
-}
-.description-primary {
-    color: #fff;
-}
-.description-second {
-    color: #7f8c8d;
-}
-.btn {
-    border-radius: 15px;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 10px;
-    padding: 10px 50px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 150px;
-    align-self: center;
-    border: none;
-    margin-top: 1rem;
-}
-.btn-primary {
-    background-color: transparent;
-    border: 1px solid #fff;
-    transition: background-color .5s;
-}
-.btn-primary:hover {
-    background-color: #fff;
-    color: #000;
-}
-.btn-second {
-    background-color: #000;
-    border: 1px solid;
-    transition: background-color .5s;
-}
-.btn-second:hover {
-    background-color: #fff;
-    border: 1px solid #000;
-    color: #000;
-}
-.first-content {
-    display: flex;
-}
-.first-content .second-column {
-    z-index: 11;
-}
-.first-column {
-    text-align: center;
-    width: 40%;
-    z-index: 10;
-}
-.second-column {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.social-media {
-    margin: 1rem 0;
-}
-.link-social-media:not(:first-child){
-    margin-left: 10px;
-}
-.link-social-media .item-social-media {
-    transition: background-color .5s;
-}
-.link-social-media:hover .item-social-media{
-    background-color: #000;
-    color: #fff;
-    border-color: #000;
-}
-.list-social-media {
-    display: flex;
-    list-style-type: none;
-}
-.item-social-media {
-    border: 1px solid #bdc3c7;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
-    color: #95a5a6;
-}
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-}
-.form input {
-    height: 45px;
-    width: 100%;
-    border: none;
-    background-color: #ecf0f1;
-}
-input:-webkit-autofill 
-{    
-    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
-    -webkit-text-fill-color: #000 !important;
-}
-.label-input {
-    background-color: #ecf0f1;
-    display: flex;
-    align-items: center;
-    margin: 8px;
-}
-.icon-modify {
-    color: #7f8c8d;
-    padding: 0 5px;
-}
-
-/* second content*/
-
-.second-content {
-    position: absolute;
-    display: flex;
-}
-.second-content .first-column {
-    order: 2;
-    z-index: -1;
-}
-.second-content .second-column {
-    order: 1;
-    z-index: -1;
-}
-.password {
-    color: #34495e;
-    font-size: 14px;
-    margin: 15px 0;
-    text-align: center;
-}
-.password::first-letter {
-    text-transform: capitalize;
-}
-
-
-
-.sign-in-js .first-content .first-column {
-    z-index: -1;
-}
-
-.sign-in-js .second-content .second-column {
-    z-index: 11;
-}
-.sign-in-js .second-content .first-column {
-    z-index: 13;
-}
-
-.sign-in-js .content::before {
-    left: 60%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    animation: slidein 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
-
-    z-index: 12;
-}
-
-.sign-up-js .content::before {
-    animation: slideout 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
-
-    z-index: 12;
-}
-
-.sign-up-js .second-content .first-column,
-.sign-up-js .second-content .second-column {
-    z-index: -1;
-}
-
-.sign-up-js .first-content .second-column {
-    z-index: 11;
-}
-
-.sign-up-js .first-content .first-column {
-    z-index: 13;    
-}
-
-
-/* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
-.sign-in-js .first-content .second-column {
-
-    z-index: -1;
-    position: relative;
-    animation: deslocamentoEsq 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
-}
-
-.sign-up-js .second-content .second-column {
-    position: relative;
-    z-index: -1;
-    animation: deslocamentoDir 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
-}
-/*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
-.cod-login img {
-    
-    max-width:50%;
-   margin-left: 25%;
-   display: flex;
-   margin-bottom: -10%;
- 
-
-   
-}
-
-.cod-login  {
-
-  background-color: #000000;
- 
-
-   
-}
-
-.cod-login p  {
-
-    text-align: center;
-    font-size: 25px;
-    padding: 10px;
-    color: #fff;
-
-   
-  
-     
-  }
-  
-
-
-
-
-
-
-/*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
-
-@keyframes deslocamentoEsq {
-
-    from {
-        left: 0;
-        opacity: 1;
-        z-index: 12;
-    }
-
-    25% {
-        left: -80px;
-        opacity: .5;
-        /* z-index: 12; NÃO HÁ NECESSIDADE */
-    }
-
-    50% {
-        left: -100px;
-        opacity: .2;
-        /* z-index: 12; NÃO HÁ NECESSIDADE */
-    }
-
-    to {
-        left: -110px;
-        opacity: 0;
-        z-index: -1;
-    }
-}
-
-
-@keyframes deslocamentoDir {
-
-    from {
-        left: 0;
-        z-index: 12;
-    }
-
-    25% {
-        left: 80px;
-        /* z-index: 12;  NÃO HÁ NECESSIDADE*/
-    }
-
-    50% {
-        left: 100px;
-        /* z-index: 12; NÃO HÁ NECESSIDADE*/
-        /* background-color: yellow;  Exemplo que dei no vídeo*/
-    }
-
-    to {
-        left: 110px;
-        z-index: -1;
-    }
-}
-
-
-/*ANIMAÇÃO CSS*/
-
-@keyframes slidein {
-
-    from {
-        left: 0;
-        width: 40%;
-    }
-
-    25% {
-        left: 5%;
-        width: 50%;
-    }
-
-    50% {
-        left: 25%;
-        width: 60%;
-    }
-
-    75% {
-        left: 45%;
-        width: 50%;
-    }
-
-    to {
-        left: 60%;
-        width: 40%;
-    }
-}
-
-@keyframes slideout {
-
-    from {
-        left: 60%;
-        width: 40%;
-    }
-
-    25% {
-        left: 45%;
-        width: 50%;
-    }
-
-    50% {
-        left: 25%;
-        width: 60%;
-    }
-
-    75% {
-        left: 5%;
-        width: 50%;
-    }
-
-    to {
-        left: 0;
-        width: 40%;
-    }
-}
-
-/*VERSÃO MOBILE*/
-@media screen and (max-width: 1040px) {
-    .content {
-        width: 100%;
-        height: 100%;
-    }
-
-    .content::before {
-        width: 100%;
-        height: 40%;
-        top: 0;
-        border-radius: 0;
-    }
-    .first-content, .second-content {
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .first-column, .second-column {
-        width: 100%;
-    }
-    
-    .sign-in-js .content::before {
-        top: 60%;
-        left: 0;
-        border-radius: 0;
-
-    }
-
-    .form {
-        width: 90%;
-    }
-    
-    /* ANIMAÇÃO MOBILE CSS*/
-
-    @keyframes deslocamentoEsq {
-
-        from {
-            top: 0;
-            opacity: 1;
-            z-index: 12;
-        }
-    
-        25% {
-            top: -80px;
-            opacity: .5;
-            /* z-index: 12; NÃO HÁ NECESSIDADE */
-        }
-    
-        50% {
-            top: -100px;
-            opacity: .2;
-            /* z-index: 12; NÃO HÁ NECESSIDADE */
-        }
-    
-        to {
-            top: -110px;
-            opacity: 0;
-            z-index: -1;
-        }
-    }
-    
-    
-    @keyframes deslocamentoDir {
-    
-        from {
-            top: 0;
-            z-index: 12;
-        }
-    
-        25% {
-            top: 80px;
-            /* z-index: 12;  NÃO HÁ NECESSIDADE*/
-        }
-    
-        50% {
-            top: 100px;
-            /* z-index: 12; NÃO HÁ NECESSIDADE*/
-            /* background-color: yellow;  Exemplo que dei no vídeo*/
-        }
-    
-        to {
-            top: 110px;
-            z-index: -1;
-        }
-    }
-    
-    
-    
-    @keyframes slidein {
-    
-        from {
-            top: 0;
-            height: 40%;
-        }
-    
-        25% {
-            top: 5%;
-            height: 50%;
-        }
-    
-        50% {
-            top: 25%;
-            height: 60%;
-        }
-    
-        75% {
-            top: 45%;
-            height: 50%;
-        }
-    
-        to {
-            top: 60%;
-            height: 40%;
-        }
-    }
-    
-    @keyframes slideout {
-    
-        from {
-            top: 60%;
-            height: 40%;
-        }
-    
-        25% {
-            top: 45%;
-            height: 50%;
-        }
-    
-        50% {
-            top: 25%;
-            height: 60%;
-        }
-    
-        75% {
-            top: 5%;
-            height: 50%;
-        }
-    
-        to {
-            top: 0;
-            height: 40%;
-        }
-    }
-   
-}
-
-@media screen and (max-width: 740px) {
-    .form {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .form {
-        width: 100%;
-    }
-}
-
-
-/* Estilos normais continuam aqui... */
-
-@media screen and (min-width: 1920px) {
-    .content {
-        width: 1200px; /* Aumenta ainda mais a área de conteúdo */
+        width: 1200px; /* Aumenta a área de conteúdo */
         height: 60%;
     }
 
     .content::before {
-        width: 40%; /* Aumenta a proporção do lado esquerdo */
+        width: 40%; /* Ajuste da proporção */
     }
 
     .title {
-        font-size: 42px; /* Tamanho maior de fonte para títulos em telas ultra largas */
+        font-size: 42px; /* Aumenta o tamanho do título */
     }
 
     .description {
-        font-size: 20px; /* Aumenta o tamanho do texto */
+        font-size: 20px; /* Texto maior */
     }
 
     .btn {
-        font-size: 14px; /* Aumenta o tamanho dos botões */
-        padding: 20px 25px; /* Expande o padding dos botões */
+        font-size: 14px;
+        padding: 20px 25px;
     }
 
     .form {
-        width: 65%; /* Maior área de formulário */
+        width: 65%;
     }
 
-    /* Ícones de redes sociais ainda maiores */
     .item-social-media {
         width: 60px;
         height: 60px;
@@ -1248,35 +321,34 @@ input:-webkit-autofill
     }
 }
 
-/* Media queries para telas ultra-widescreen (2560px e maiores) */
+/* Telas ultrawide (acima de 2500px) */
 @media screen and (min-width: 2500px) {
     .content {
-        width: 1800px; /* Aumenta ainda mais para telas ultra widescreen */
+        width: 1800px;
         height: 85%;
     }
 
     .content::before {
-        width: 40%; /* Aumenta a proporção do lado esquerdo */
+        width: 40%;
     }
 
     .title {
-        font-size: 48px; /* Aumenta o tamanho da fonte para títulos */
+        font-size: 48px;
     }
 
     .description {
-        font-size: 24px; /* Texto maior para maior legibilidade */
+        font-size: 24px;
     }
 
     .btn {
-        font-size: 16px; /* Botões maiores */
-        padding: 25px 25px; /* Expande o padding para melhor proporção */
+        font-size: 16px;
+        padding: 25px 25px;
     }
 
     .form {
-        width: 70%; /* Maior área de formulário para distribuir conteúdo */
+        width: 70%;
     }
 
-    /* Ícones de redes sociais maiores para ultra-widescreen */
     .item-social-media {
         width: 70px;
         height: 70px;
@@ -1284,56 +356,3 @@ input:-webkit-autofill
         font-size: 30px;
     }
 }
-
-
-
-
-
-
-/* Ícones de redes sociais maiores para ultra-widescreen */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
