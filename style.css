@@ -1215,7 +1215,7 @@ input:-webkit-autofill
 @media screen and (min-width: 1920px) {
     .content {
         width: 1200px; /* Aumenta ainda mais a área de conteúdo */
-        height: 70%;
+        height: 60%;
     }
 
     .content::before {
