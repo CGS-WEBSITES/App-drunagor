@@ -1249,14 +1249,14 @@ input:-webkit-autofill
 }
 
 /* Media queries para telas ultra-widescreen (2560px e maiores) */
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2500px) {
     .content {
         width: 1800px; /* Aumenta ainda mais para telas ultra widescreen */
         height: 85%;
     }
 
     .content::before {
-        width: 60%; /* Aumenta a proporção do lado esquerdo */
+        width: 40%; /* Aumenta a proporção do lado esquerdo */
     }
 
     .title {
@@ -1269,7 +1269,7 @@ input:-webkit-autofill
 
     .btn {
         font-size: 16px; /* Botões maiores */
-        padding: 25px 100px; /* Expande o padding para melhor proporção */
+        padding: 25px 25px; /* Expande o padding para melhor proporção */
     }
 
     .form {
