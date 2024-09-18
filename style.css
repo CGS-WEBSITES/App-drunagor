@@ -14,10 +14,10 @@ body {
     align-items: center;
     height: 100vh;
     background-image: url('image/bg-login.png');
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    background-size: cover; /* Garante que a imagem cubra toda a tela */
-    background-position: center center; /* Centraliza a imagem de fundo */
-    background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 .content {
     background-color: #fff;
@@ -27,6 +27,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    overflow: hidden; /* Para evitar que o conteúdo fora do limite seja exibido */
 }
 .content::before {
     content: "";
@@ -94,6 +95,7 @@ body {
 }
 .first-content {
     display: flex;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 .first-content .second-column {
     z-index: 11;
@@ -163,11 +165,34 @@ input:-webkit-autofill
     padding: 0 5px;
 }
 
-/* second content*/
+/* Animar transição entre telas */
+.sign-in-js .first-content {
+    transform: translateX(0); /* A tela de login aparece */
+    opacity: 1;
+}
+.sign-up-js .first-content {
+    transform: translateX(-100%); /* A tela de login desliza para fora */
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
 
+.sign-in-js .second-content {
+    transform: translateX(100%); /* A tela de signup desliza para fora */
+    opacity: 0;
+}
+.sign-up-js .second-content {
+    transform: translateX(0); /* A tela de signup aparece */
+    opacity: 1;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Configurações de largura e layout */
 .second-content {
     position: absolute;
     display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 .second-content .first-column {
     order: 2;
@@ -185,57 +210,6 @@ input:-webkit-autofill
 }
 .password::first-letter {
     text-transform: capitalize;
-}
-
-.sign-in-js .first-content .first-column {
-    z-index: -1;
-}
-
-.sign-in-js .second-content .second-column {
-    z-index: 11;
-}
-.sign-in-js .second-content .first-column {
-    z-index: 13;
-}
-
-.sign-in-js .content::before {
-    left: 60%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    animation: slidein 1.3s;
-    z-index: 12;
-}
-
-.sign-up-js .content::before {
-    animation: slideout 1.3s;
-    z-index: 12;
-}
-
-.sign-up-js .second-content .first-column,
-.sign-up-js .second-content .second-column {
-    z-index: -1;
-}
-
-.sign-up-js .first-content .second-column {
-    z-index: 11;
-}
-
-.sign-up-js .first-content .first-column {
-    z-index: 13;    
-}
-
-.sign-in-js .first-content .second-column {
-    z-index: -1;
-    position: relative;
-    animation: deslocamentoEsq 1.3s;
-}
-
-.sign-up-js .second-content .second-column {
-    position: relative;
-    z-index: -1;
-    animation: deslocamentoDir 1.3s;
 }
 
 /* Responsividade */
@@ -282,77 +256,5 @@ input:-webkit-autofill
 @media screen and (max-width: 425px) {
     .form {
         width: 100%;
-    }
-}
-
-/* Telas acima de 1920px */
-@media screen and (min-width: 1920px) {
-    .content {
-        width: 1200px; /* Aumenta a área de conteúdo */
-        height: 60%;
-    }
-
-    .content::before {
-        width: 40%; /* Ajuste da proporção */
-    }
-
-    .title {
-        font-size: 42px; /* Aumenta o tamanho do título */
-    }
-
-    .description {
-        font-size: 20px; /* Texto maior */
-    }
-
-    .btn {
-        font-size: 14px;
-        padding: 20px 25px;
-    }
-
-    .form {
-        width: 65%;
-    }
-
-    .item-social-media {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        font-size: 24px;
-    }
-}
-
-/* Telas ultrawide (acima de 2500px) */
-@media screen and (min-width: 2500px) {
-    .content {
-        width: 1800px;
-        height: 85%;
-    }
-
-    .content::before {
-        width: 40%;
-    }
-
-    .title {
-        font-size: 48px;
-    }
-
-    .description {
-        font-size: 24px;
-    }
-
-    .btn {
-        font-size: 16px;
-        padding: 25px 25px;
-    }
-
-    .form {
-        width: 70%;
-    }
-
-    .item-social-media {
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        font-size: 30px;
     }
 }
